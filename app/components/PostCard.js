@@ -5,10 +5,12 @@ import { supabase } from "@/lib/supabase";
 import CommentSection from "./CommentSection";
 import { canEditPost, canDeletePost, canComment } from "@/utils/role";
 
-export default function PostCard({ post, user, role, setPosts, name, summary }) {
+export default function PostCard({ post, user, role, setPosts, name }) {
     const [editing, setEditing] = useState(false);
-    const [data, setData] = useState({ title: post.title, content: post.content });
-
+    const [data, setData] = useState({
+        title: post.title,
+        body: post.body
+    });
     const canEdit = canEditPost(role, user?.id, post.author_id);
     const canDelete = canDeletePost(role, user?.id, post.author_id);
     const canAddComment = canComment(role);
@@ -68,15 +70,15 @@ export default function PostCard({ post, user, role, setPosts, name, summary }) 
             ) : (
                 <>
                     <h2 className="text-xl font-semibold">{post.title}</h2>
-                    <p className="mt-1"> {post.body}</p>
 
-                    <p className="mt-1">
-                        <h4>
+                    <p className="mt-1">{post.body}</p>
 
-                            Summary:
-                        </h4>
-
-                        {post.summary}</p>
+                    {post.summary && (
+                        <div className="mt-2">
+                            <h4 className="font-semibold">Summary:</h4>
+                            <p>{post.summary}</p>
+                        </div>
+                    )}
                 </>
             )}
 
