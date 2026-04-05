@@ -40,7 +40,7 @@ A full-stack Blog Application built using modern web technologies. This app allo
 ## Tech Stack
 
 **Frontend:**
-- React.js / Next.js
+- Next.js
 - Tailwind CSS
 
 **Database:**
