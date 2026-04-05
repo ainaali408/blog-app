@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from '../../lib/supabase';
 import { canCreatePost } from "@/utils/role";
 import { useRouter } from "next/navigation"; // 🔹 for redirect
 

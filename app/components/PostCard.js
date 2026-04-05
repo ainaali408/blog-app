@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from '../../lib/supabase';
 import CommentSection from "./CommentSection";
 import { canEditPost, canDeletePost, canComment } from "@/utils/role";
 
