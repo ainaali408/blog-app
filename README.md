@@ -57,8 +57,12 @@ A full-stack Blog Application built using modern web technologies. This app allo
 
 - Users can sign up and log in
 - Role-based permissions:
-  - **Admin:** Manage all posts and comments
+  - **Admin:** Manage all posts and comment
+  - admin@gmail.com
+  - password: admin123
   - **Author:** Create and manage own posts
+  - author@gmail.com
+  - password:author123
   - **Viewer:** View and comment on posts
 
 ---
