@@ -1,13 +1,13 @@
 import "./globals.css";
 
-export default function RootLayout({ children }) {
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body>
-
-
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
